@@ -1,0 +1,29 @@
+# Sito Dott.ssa Irene Agrestini - hosting OVHcloud
+Options -Indexes
+RewriteEngine On
+
+# Tutto su https://www.ireneagrestini.com (un solo indirizzo per Google)
+# (si attiva solo sui domini ireneagrestini, non sull'indirizzo provvisorio di OVH)
+RewriteCond %{HTTP_HOST} ireneagrestini\. [NC]
+RewriteCond %{SERVER_PORT} 80 [OR]
+RewriteCond %{HTTP_HOST} !^www\.ireneagrestini\.com$ [NC]
+RewriteRule ^(.*)$ https://www.ireneagrestini.com/$1 [R=301,L]
+
+# /index.html -> /
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml text/css application/javascript
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 5 minutes"
+</IfModule>
