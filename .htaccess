@@ -2,12 +2,19 @@
 Options -Indexes
 RewriteEngine On
 
-# Tutto su https://www.ireneagrestini.com (un solo indirizzo per Google)
-# (si attiva solo sui domini ireneagrestini, non sull'indirizzo provvisorio di OVH)
-RewriteCond %{HTTP_HOST} ireneagrestini\. [NC]
+# Il .com: tutto su https://www.ireneagrestini.com (un solo indirizzo per Google)
+RewriteCond %{HTTP_HOST} ireneagrestini\.com$ [NC]
 RewriteCond %{SERVER_PORT} 80 [OR]
 RewriteCond %{HTTP_HOST} !^www\.ireneagrestini\.com$ [NC]
 RewriteRule ^(.*)$ https://www.ireneagrestini.com/$1 [R=301,L]
+
+# TEMPORANEO (bozza): il .it mostra il sito per l'anteprima e Google non lo indicizza.
+# Quando il .com e' online, sostituire con il rimando 301 del .it verso il .com.
+<IfModule mod_headers.c>
+  <If "%{HTTP_HOST} =~ /ireneagrestini\.it$/">
+    Header always set X-Robots-Tag "noindex, nofollow"
+  </If>
+</IfModule>
 
 # /index.html -> /
 RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
