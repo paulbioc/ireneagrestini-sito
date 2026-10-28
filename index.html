@@ -114,7 +114,13 @@ section.alt{background:var(--band)}
 .therapy .who{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--sea)}
 .therapy p{font-size:.97rem;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-.chips li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:.92rem}
+.chips li{border:1px solid var(--line);background:var(--surface);border-radius:999px;font-size:.92rem}
+.chips a{display:block;padding:6px 14px;color:var(--sea);font-weight:600;text-decoration:none;border-radius:999px}
+.chips a::after{content:" \2192"}
+.chips a:hover,.chips a:focus-visible{background:var(--sea);color:#fff}
+.therapy .more{margin-top:auto;padding-top:4px;font-size:.92rem;font-weight:600;color:var(--sea)}
+.therapy .more a{color:var(--sea);text-underline-offset:3px}
+.therapy .more a::after{content:" \2192"}
 
 ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:0}
 ol.steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
@@ -225,42 +231,50 @@ footer .sites{display:flex;flex-wrap:wrap;gap:6px 18px}
           <span class="who">Ragazzi e adulti</span>
           <h3>Allineatori trasparenti (ortodonzia invisibile)</h3>
           <p>Mascherine trasparenti e rimovibili, fatte su misura e sostituite ogni 1-2 settimane. Spostano i denti in modo graduale e si tolgono per mangiare e per lavare i denti. Funzionano solo se indossate per il numero di ore indicato ogni giorno.</p>
+          <p class="more"><a href="/guida-ortodonzia/allineatori-trasparenti/">Come funzionano gli allineatori</a></p>
         </article>
         <article class="therapy">
           <span class="who">Ragazzi e adulti</span>
           <h3>Apparecchio fisso</h3>
           <p>Attacchi incollati sui denti e collegati da un filo. È indicato per alcuni casi che gli allineatori non risolvono bene e non dipende dalla costanza nell'indossarlo.</p>
+          <p class="more"><a href="/guida-ortodonzia/apparecchio-fisso/">L'apparecchio fisso</a> · <a href="/guida-ortodonzia/fastidi-apparecchio/">Fastidi dei primi giorni</a></p>
         </article>
         <article class="therapy">
           <span class="who">Bambini</span>
           <h3>Ortodonzia intercettiva</h3>
           <p>Durante la crescita, con i denti da latte e i primi definitivi, alcuni problemi si possono correggere o ridurre per tempo, a volte con apparecchi mobili. Spesso basta un controllo periodico.</p>
+          <p class="more"><a href="/guida-ortodonzia/ortodonzia-intercettiva/">Ortodonzia intercettiva</a> · <a href="/guida-ortodonzia/espansore-palatale-apparecchi-mobili/">Espansore e apparecchi mobili</a></p>
         </article>
         <article class="therapy">
           <span class="who">Ragazzi</span>
           <h3>Canini e secondi molari inclusi</h3>
           <p>Quando un dente resta nell'osso, come un canino superiore o un secondo molare, si può guidare in arcata con l'apparecchio, spesso dopo una piccola scopertura chirurgica. Riconoscerlo tra i 10 e i 13 anni amplia le possibilità di trattamento.</p>
+          <p class="more"><a href="/guida-ortodonzia/canini-inclusi-secondi-molari-inclusi/">Canini e secondi molari inclusi</a></p>
         </article>
         <article class="therapy">
           <span class="who">Dopo il trattamento</span>
           <h3>Contenzione</h3>
           <p>Finita la fase attiva, i denti tendono a tornare indietro. Una mascherina notturna o un filo incollato dietro i denti mantiene il risultato; la dottoressa indica quale e per quanto tempo.</p>
+          <p class="more"><a href="/guida-ortodonzia/contenzione-recidiva/">Contenzione e recidiva</a></p>
         </article>
         <article class="therapy">
           <span class="who">Bambini</span>
           <h3>Cure dei denti da latte</h3>
           <p>Le carie dei denti da latte vanno curate anche se poi cadranno: possono dare dolore e infezioni, e la perdita precoce di un dente può togliere spazio a quello definitivo.</p>
+          <p class="more"><a href="/guida-ortodonzia/prima-visita-ortodontica-bambini/#denti-da-latte-e-prevenzione">Denti da latte e prevenzione</a></p>
         </article>
         <article class="therapy">
           <span class="who">Bambini e ragazzi</span>
           <h3>Sigillature e prevenzione</h3>
           <p>Sigillatura dei solchi dei molari permanenti, istruzioni su spazzolino e alimentazione, controlli periodici e, quando indicato, applicazioni di fluoro.</p>
+          <p class="more"><a href="/guida-ortodonzia/prima-visita-ortodontica-bambini/#denti-da-latte-e-prevenzione">Sigillature e fluoro</a></p>
         </article>
       </div>
       <div class="stack">
         <h3>Problemi che si valutano alla visita</h3>
+        <p>Tocca un problema per leggere la spiegazione nella guida.</p>
         <ul class="chips">
-          <li>Denti affollati</li><li>Denti distanziati</li><li>Denti ruotati</li><li>Morso aperto</li><li>Morso profondo</li><li>Morso crociato</li><li>Abitudini come il ciuccio o il dito in bocca</li>
+          <li><a href="/guida-ortodonzia/malocclusioni/#affollamento">Denti affollati</a></li><li><a href="/guida-ortodonzia/malocclusioni/#diastemi">Denti distanziati</a></li><li><a href="/guida-ortodonzia/malocclusioni/#affollamento">Denti ruotati</a></li><li><a href="/guida-ortodonzia/malocclusioni/#morso-aperto">Morso aperto</a></li><li><a href="/guida-ortodonzia/malocclusioni/#morso-profondo">Morso profondo</a></li><li><a href="/guida-ortodonzia/malocclusioni/#morso-crociato">Morso crociato</a></li><li><a href="/guida-ortodonzia/malocclusioni/#seconda-classe">Denti superiori sporgenti (II classe)</a></li><li><a href="/guida-ortodonzia/malocclusioni/#terza-classe">Denti inferiori davanti ai superiori (III classe)</a></li><li><a href="/guida-ortodonzia/canini-inclusi-secondi-molari-inclusi/">Canini o molari che non spuntano</a></li><li><a href="/guida-ortodonzia/ciuccio-dito-respirazione-orale/#ciuccio-e-dito">Abitudini come il ciuccio o il dito in bocca</a></li><li><a href="/guida-ortodonzia/ciuccio-dito-respirazione-orale/#respirazione-orale">Respirazione a bocca aperta</a></li>
         </ul>
       </div>
     </div>
