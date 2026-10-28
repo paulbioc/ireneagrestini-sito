@@ -145,6 +145,10 @@ dl.info dd{margin:0}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
 @media (max-width:420px){dl.info{grid-template-columns:1fr;gap:2px}dl.info dd{margin-bottom:8px}}
 
+.glinks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px}
+.glinks a{display:block;height:100%;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink);font-weight:600}
+.glinks a:hover{border-color:var(--sea)}
+.glinks span{display:block;font-family:var(--f-mono);font-size:.75rem;color:var(--sea);font-weight:500;margin-bottom:4px}
 footer{border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
 footer .wrap{padding-block:32px;display:grid;gap:12px}
 footer a{color:var(--muted)}
@@ -157,7 +161,7 @@ footer .sites{display:flex;flex-wrap:wrap;gap:6px 18px}
   <div class="wrap">
     <a class="brand" href="#inizio">Dott.ssa Irene Agrestini<small>Ortodonzia · Pescara</small></a>
     <nav class="menu" aria-label="Sezioni">
-      <a href="#chi-e">Chi è</a><a href="#terapie">Terapie</a><a href="#percorso">Percorso</a><a href="#bambini">Bambini</a><a href="#domande">Domande</a><a href="#contatti">Contatti</a>
+      <a href="#chi-e">Chi è</a><a href="#terapie">Terapie</a><a href="#percorso">Percorso</a><a href="#bambini">Bambini</a><a href="/guida-ortodonzia/">Guida</a><a href="#domande">Domande</a><a href="#contatti">Contatti</a>
     </nav>
     <a class="btn primary" href="tel:+393921873886" data-track="tel_header">Chiama lo studio</a>
   </div>
@@ -288,7 +292,19 @@ footer .sites{display:flex;flex-wrap:wrap;gap:6px 18px}
     </div>
   </section>
 
-  <section class="block" id="domande">
+  <section class="block" id="guida">
+    <div class="wrap">
+      <div class="stack">
+        <span class="eyebrow">Guida all'ortodonzia</span>
+        <h2>Approfondimenti per genitori e pazienti</h2>
+        <p>Una guida in 15 capitoli, scritta dalla Dott.ssa Agrestini, sulle domande più comuni: dalla prima visita del bambino agli allineatori, fino alla contenzione. Con le fonti scientifiche per chi vuole approfondire.</p>
+      </div>
+      <ul class="glinks"><li><a href="/guida-ortodonzia/quando-serve-ortodonzia/"><span>CAPITOLO 01</span>Quando serve l'ortodonzia</a></li><li><a href="/guida-ortodonzia/prima-visita-ortodontica-bambini/"><span>CAPITOLO 03</span>La prima visita del bambino</a></li><li><a href="/guida-ortodonzia/ortodonzia-intercettiva/"><span>CAPITOLO 04</span>Ortodonzia intercettiva</a></li><li><a href="/guida-ortodonzia/apparecchio-fisso/"><span>CAPITOLO 07</span>L'apparecchio fisso</a></li><li><a href="/guida-ortodonzia/allineatori-trasparenti/"><span>CAPITOLO 08</span>Allineatori trasparenti</a></li><li><a href="/guida-ortodonzia/ortodonzia-adulti/"><span>CAPITOLO 09</span>Ortodonzia negli adulti</a></li><li><a href="/guida-ortodonzia/contenzione-recidiva/"><span>CAPITOLO 13</span>Contenzione e recidiva</a></li><li><a href="/guida-ortodonzia/costi-ortodonzia/"><span>CAPITOLO 14</span>Costi e pagamento a rate</a></li></ul>
+      <p><a class="btn ghost" href="/guida-ortodonzia/">Tutti i capitoli della guida</a></p>
+    </div>
+  </section>
+
+  <section class="block alt" id="domande">
     <div class="wrap two">
       <div class="stack">
         <span class="eyebrow">Domande frequenti</span>
@@ -306,7 +322,7 @@ footer .sites{display:flex;flex-wrap:wrap;gap:6px 18px}
     </div>
   </section>
 
-  <section class="block alt" id="contatti">
+  <section class="block" id="contatti">
     <div class="wrap">
       <div class="stack">
         <span class="eyebrow">Contatti</span>
