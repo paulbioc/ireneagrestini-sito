@@ -38,6 +38,15 @@
     d.querySelector('.x').onclick = function () { scegli('no'); };
   }
 
+  // Conversioni Google Ads: clic su telefono e WhatsApp (contano solo se il visitatore ha accettato)
+  var CONV = { tel: 'AW-740673737/_Ig2CNmmkbIdEMmRl-EC', wa: 'AW-740673737/lcDsCJiSmbIdEMmRl-EC' };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]'); if (!a || !caricato) return;
+    var h = a.getAttribute('href') || '';
+    var k = h.indexOf('tel:') === 0 ? 'tel' : (/wa\.me|api\.whatsapp\.com/.test(h) ? 'wa' : null);
+    if (k) gtag('event', 'conversion', { send_to: CONV[k] });
+  }, true);
+
   var scelta = leggi();
   if (scelta === 'si') caricaTag();
   function avvio() {
