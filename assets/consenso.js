@@ -14,7 +14,7 @@
     if (caricato) return; caricato = true;
     gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' });
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ADS_ID;
-    document.head.appendChild(s); gtag('js', new Date()); gtag('config', ADS_ID);
+    document.head.appendChild(s); gtag('js', new Date()); gtag('config', ADS_ID); gtag('config', 'G-818NP2GHN0');
   }
 
   var css = '#ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:620px;margin-inline:auto;background:#fff;color:#14303B;border:1px solid #C9DAD8;border-radius:16px;box-shadow:0 12px 40px rgba(20,48,59,.22);padding:20px 20px 18px;font:15px/1.5 Figtree,system-ui,sans-serif}' +
